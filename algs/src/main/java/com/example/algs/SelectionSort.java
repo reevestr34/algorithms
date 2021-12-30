@@ -2,17 +2,9 @@ package com.example.algs;
 
 import com.example.datastructs.Array;
 
-public class SelectionSort {
-    private Array array;
-    private int numSwaps;
-    private int numCompares;
-    private boolean debugMode;
-
+public class SelectionSort extends Sort{
     public SelectionSort(Array array) {
-        this.numSwaps = 0;
-        this.numCompares = 0;
-        this.array = array;
-        this.debugMode = false;
+        super(array);
     }
     
     public void sort() {
@@ -39,25 +31,5 @@ public class SelectionSort {
             }
         }
         return indexMin;
-    }
-
-    public Array getArray() {
-        return array;
-    }
-
-    public int getNumCompares() {
-        return numCompares;
-    }
-
-    public int getNumSwaps() {
-        return numSwaps;
-    }
-
-    public void enableDebugMode() {
-        debugMode = true;
-    }
-
-    public void disableDebugMode() {
-        debugMode = false;
     }
 }

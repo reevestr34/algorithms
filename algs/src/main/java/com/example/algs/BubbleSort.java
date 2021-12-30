@@ -3,17 +3,10 @@ package com.example.algs;
 import com.example.datastructs.Array;
 
 
-public class BubbleSort {
-    private Array array;
-    private int numSwaps;
-    private int numCompares;
-    private boolean debugMode;
+public class BubbleSort extends Sort {
 
     public BubbleSort(Array array) {
-        this.numSwaps = 0;
-        this.numCompares = 0;
-        this.array = array;
-        this.debugMode = false;
+        super(array);
     }
 
     /**
@@ -46,25 +39,5 @@ public class BubbleSort {
             }
         }
         return true;
-    }
-
-    public Array getArray() {
-        return array;
-    }
-
-    public int getNumCompares() {
-        return numCompares;
-    }
-
-    public int getNumSwaps() {
-        return numSwaps;
-    }
-
-    public void enableDebugMode() {
-        debugMode = true;
-    }
-
-    public void disableDebugMode() {
-        debugMode = false;
     }
 }
