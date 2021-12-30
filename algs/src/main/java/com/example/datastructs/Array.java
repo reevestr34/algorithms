@@ -1,5 +1,7 @@
 package com.example.datastructs;
 
+import java.util.Arrays;
+
 public class Array<Type extends Comparable<Type>> {
     Type[] array;
     public Array(Type[] inputArray) {
@@ -48,5 +50,22 @@ public class Array<Type extends Comparable<Type>> {
             System.out.printf("%s ", obj);
         }
         System.out.print("]\n");
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Array<?> array1 = (Array<?>) o;
+        return Arrays.equals(array, array1.array);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(array);
     }
 }
