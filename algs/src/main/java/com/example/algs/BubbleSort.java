@@ -15,6 +15,7 @@ public class BubbleSort extends Sort {
     public void sort() {
         numCompares = 0;
         numSwaps = 0;
+
         while (!isSorted()) {
             for (int i = 0; i < array.length() - 1; i++) {
                 if (array.atIndex(i).compareTo(array.atIndex(i + 1)) > 0) {
